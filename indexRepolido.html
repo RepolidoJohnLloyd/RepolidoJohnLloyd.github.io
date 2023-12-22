@@ -1,162 +1,684 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet icon" type="icon" href="JL.jpg" />
-    <title>My Portfolio</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>2
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
 
-  <body>
-    <header class="header">
-      <a href="#" class="JL-img" >
-        <img src="JL.jpg" />
-      </a>
-      <a href="#" class="logo">John<span>Lloyd</span></a>
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mina', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #191919;
+    color: white;
+}
+.home-content {
+    max-width: 500px;
+    background-color: #191919;
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 90px;
+    box-shadow: 0 0 50px chartreuse;
+}
 
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hello!</h3>
-        <h1>I'm John Lloyd E. Repolido</h1>
-        <h3>
-          and a working scholar at the University of Cebu, Main Campus. My dream
-          is to become a <span>software engineer</span>.
-        </h3>
-        <p>
-          A dedicated student currently pursuing a Bachelor of Science in
-          Information Technology (BSIT). I have a passion for technology and a
-          strong desire to learn and grow in this field.
-        </p>
-        <div class="social-media">
-          <a href="https://www.facebook.com/nickname.jl" target="_blank"
-            ><i class="bx bxl-facebook-circle"></i
-          ></a>
-          <a href="https://www.instagram.com/nickname.jl" target="_blank"
-            ><i class="bx bxl-instagram-alt"></i
-          ></a>
-          <a href="https://twitter.com/RepolidoJL" target="_blank"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-        </div>
-      </div>
+.home-content h3 {  
+    font-size: 20px;
+    font-weight: 650;
+    animation: 3s anim-lineUp ease-out;
+}
 
-      <div class="img1-img"><img src="image1.jpg" alt="" /></div>
-    </section>
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="container1">
-        <img src="image3.jpg" />
-        <div class="about-text">
-          <h2>About <span>Me</span></h2>
-          <p>
-            Hi there! I'm John Lloyd E. Repolido, a friendly and curious
-            individual. I love to learn and explore new things, especially when
-            it comes to technology. I'm currently studying in the field of
-            Information Technology, and it's a world I find fascinating. I enjoy
-            spending time in nature, going on hikes, and reading when I'm not
-            active in the digital world. In the rapidly changing world of
-            technology, I'm interested to continue developing and learning.
-          </p>
-        </div>
-      </div>
-    </section>
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
 
-    <!-- --Services-- -->
-    <div class="service" id="services">
-      <div class="title">
-        <h2><span>My</span>Services</h2>
-      </div>
+.home-content h3 span{
+    color: chartreuse;
+    animation: color-change 1s infinite;
+}
+.home-content h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: -3px 0;
+    animation: 2s anim-popoutin ease;
+}
 
-      <div class="service1">
-        <div class="box">
-          <i class="bx bx-bulb"></i>
-          <h5>Basic Computer Proficiency</h5>
-          <div class="text">
-            <p>
-              Familiarity with the basic operation of a computer, including
-              using the keyboard and mouse, managing files and folders, and
-              understanding the file system.
-            </p>
-          </div>
-        </div>
+.home-content p {
+    font-size: 18px;
+    animation: 2s anim-popoutin ease;
+}
 
-        <div class="box">
-          <i class="bx bxs-file-doc"></i>
-          <h5>Word Processing Skills</h5>
-          <div class="text">
-            <p>
-              Proficiency in using word processing software like Microsoft Word
-              or Google Docs to create, format, and edit documents effectively.
-            </p>
-          </div>
-        </div>
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 5%;
+    background:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
-        <div class="box">
-          <i class="bx bx-no-signal"></i>
-          <h5>Basic Troubleshooting</h5>
-          <div class="text">
-            <p>
-              Troubleshooting common computer issues, such as resolving common
-              computer issues, software problems, connectivity issues (e.g.,
-              Wi-Fi), system updates, and hardware maintenance.
-            </p>
-          </div>
-        </div>
-      </div>
+.logo {
+    margin-left: -450px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
 
-      <!-- --Contancts-- -->
-      <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+.logo span {
+    color: chartreuse  ;
+}
+.JL-img img {
+    max-width: 65px;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    font-size: 20px;
+    font-weight: 550;
+    margin-left: 40px;
+    transition: .3s;
+    display: inline-block;
+    color: chartreuse;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(.2s * var (--i));
+}
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" class="full-width"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-      </section>
-    <!-- --footer-- -->
-    <footer>
-      <div class="contact-me">
-        <p><i class="bx bxs-envelope"></i> johnlloydrepolido27@gmail.com</p>
-        <p><i class="bx bxs-phone"></i> (+63)945-691-6082</p>
-      </div>
-      <p>
-        Please get in touch to arrange a meeting with me. You can reach me
-        through this email and number above.
-      </p>
-     
-      <div class="bottomFooter">
-        <p>Copyright &copy;2023;  - UCMN - WebDevProject</p>
-        <div class="social">
-            <a href="https://www.facebook.com/nickname.jl" target="_blank"
-              ><i class="bx bxl-facebook-circle"></i
-            ></a>
-            <a href="https://www.instagram.com/nickname.jl" target="_blank"
-              ><i class="bx bxl-instagram-alt"></i
-            ></a>
-            <a href="https://twitter.com/RepolidoJL" target="_blank"
-              ><i class="bx bxl-twitter"></i
-            ></a>
-          </div>
-      </div>
-    </footer>
-  </body>
-</html>
+.navbar a:hover {
+    color: white
+    
+
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 60px 10% 0;
+    align-items: center;
+    justify-content: space-between;
+    animation: fade-in 1s ease-in;
+}
+
+.social-media a {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid chartreuse;
+    color: chartreuse;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 15px 30px 0;
+    animation: bounce 2s infinite;
+}
+
+.social-media a:hover {
+    background-color:  white;
+    color: chartreuse;
+}
+
+.img1-img img {
+    max-width: 400px;
+    margin-right: -70px;
+    display: inline-block;
+    padding: 20px 20px;
+    background: chartreuse;
+    border-radius: 90px;
+    box-shadow: 0 0 30px chartreuse;
+    animation: fade-in 1s ease-in;
+    animation: shake 2s infinite;
+}
+
+
+/* animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+      transform: scale(1.0);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes color-change {
+    0% {
+      color: crimson;
+    }
+    50% {
+      color: chartreuse;
+    }
+    100% {
+      color: cyan;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes anim-popoutin {
+    0% {
+      color: black;
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: red;
+      transform: scale(2);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+/* ABOUT */
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+.about img {
+    height: auto;
+    width: 300px;
+    padding: 10px 20px;
+    background: chartreuse;
+    border-radius: 90px;
+    box-shadow: 0 0 50px chartreuse;
+}
+.about-text {
+    width: 550px;
+}
+.container1 {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: float 1s infinite;
+}
+.about-text h2 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 200px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    max-width: 500px;
+    background-color: #191919;
+    display: inline-block;
+    padding: 50px 40px;
+    border-radius: 90px;
+    box-shadow: 0 0 50px chartreuse;
+}
+.about-text span {
+    color: chartreuse;
+}
+/* --animation-- */
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+/* --services-- */
+.service {
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #191919;
+}
+.title {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.title h2 {
+    color: white;
+    font-size: 55px;
+    margin: 30px;
+    text-align: center;
+    animation: 1s anim-flipX ease infinite;
+}
+.service1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+.title span {
+    color: chartreuse;
+}
+.box {
+    width: 335px;
+    height: 365px;
+    padding: 10px 25px;
+    background: #191919;
+    border-radius: 50px;
+    margin: 25px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 20px chartreuse;
+    animation: shake 2s infinite;
+}
+.box i {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: chartreuse;
+    animation: rotate 10s infinite;
+}
+.box:hover {
+    background-color:  white;
+    color: chartreuse;
+}
+h5 {
+    color: chartreuse;
+    font-size: 22px;    
+    margin-bottom: 15px;
+}
+.text p {
+    line-height: 27px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(10px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes anim-flipX {
+    0% {
+      opacity: 0;
+      transform: rotateX(90def);
+    }
+    50% {
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+  }
+
+.contact {
+    background-color: #191919;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+.contact span {
+    color: chartreuse;
+}
+.heading {
+    animation: blink 1s infinite;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact .input-box input,
+.contact .input-box textarea {
+    max-width: 600px;
+    padding: 15px;
+    font-size: 16px;
+    color: black;
+    background-color: khaki;
+    border: 1px solid chartreuse;
+    border-radius: 8px;
+    margin: 10px 0;
+    resize: none;
+}
+
+.contact form textarea {
+    max-width: 600px;
+    height: 150px; 
+    resize: none;
+}
+.contact form .full-width {
+    font-size: 16px;
+    background-color: khaki;
+    border: 1px solid chartreuse;
+    border-radius: 8px;
+    width: 100%; 
+}
+.contact .input-box textarea::placeholder {
+    max-width: 600px;
+    color: black;
+    opacity: 0.7;
+    font-size: 16px; 
+}
+
+        .contact .input-box input {
+            width: 48%;
+        }
+
+        .contact .input-box textarea {
+            width: 100%;
+            resize: none;
+        }
+
+        .contact .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .contact .btn:hover {
+            background-color: #45a049;
+        }
+footer {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    background:#191919;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(2) {
+    color: white;
+    width: 450px;
+    font-size: 20;
+    line-height: 25px;
+    text-align: center;  
+}
+
+.contact-me {
+    height: 100px;
+    width: 450px;
+    font-size: 20;
+    line-height: 25px;
+    text-align: center;  
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.contact-me i {
+    color: chartreuse;
+}
+.contact-me i:hover {
+    background-color:  white;
+    color: chartreuse;
+}
+.social a {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid chartreuse;
+    color: chartreuse;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 15px 30px 0;
+    animation: bounce 2s infinite;
+}
+
+.social a:hover {
+    background-color:  white;
+    color: chartreuse;
+}
+
+/* --animation-- */
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.bottomFooter{
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+}
+/* mobile */
+@media screen and (max-width: 724px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+    .home-content {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .home-content h3 {
+        font-size: 15px;
+        font-weight: 500;
+        animation: 3s anim-lineUp ease-out;
+    }
+
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 24px;
+        font-weight: 500;
+        margin: -3px 0;
+        animation: 2s anim-popoutin ease;
+    }
+
+    .home-content p {
+        font-size: 12px;
+        animation: 2s anim-popoutin ease;
+    }
+
+    .social-media {
+        font-size: 14px;
+        align-items: left;
+        text-align: left;
+        padding: 15px;
+        width: 100%;
+        position: absolute;
+    }
+
+    .img1-img img {
+        max-width: 100%;
+        height: auto;
+        
+        margin-left: 30px;
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .JL-img img {
+        max-width: 50px;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .service1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 15px 0;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 0 20px chartreuse;
+        animation: shake 2s infinite;
+    }
+
+    .contact,
+    .contact-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact form textarea,
+    .contact form .full-width {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .input-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social a {
+        margin: 15px;
+    }
+
+    .bottomFooter {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    footer p:nth-child(2) {
+        width: 100%;
+    }
+}
