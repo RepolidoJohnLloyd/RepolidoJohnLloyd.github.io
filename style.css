@@ -624,13 +624,13 @@ footer p:nth-child(2) {
     .about img {
         max-width: 100%;
         height: auto;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     .about-text {
         width: 100%;
         font-size: 12px;
-        margin-left: 50px;
+        margin-left: 2px;
     }
 
     .service1 {
@@ -649,7 +649,7 @@ footer p:nth-child(2) {
         text-align: center;
         box-shadow: 0 0 20px chartreuse;
         animation: shake 2s infinite;
-        margin-left: 50px;
+        margin-left: 10px;
     }
 
     .contact,
