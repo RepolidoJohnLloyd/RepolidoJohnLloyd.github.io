@@ -608,7 +608,6 @@ footer p:nth-child(2) {
     .img1-img img {
         max-width: 100%;
         height: auto;
-        
         margin-left: 30px;
     }
 
@@ -621,13 +620,17 @@ footer p:nth-child(2) {
     .JL-img img {
         max-width: 50px;
     }
-
+    
     .about img {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-left: 30px;
     }
 
     .about-text {
         width: 100%;
+        font-size: 12px;
+        margin-left: 50px;
     }
 
     .service1 {
@@ -636,15 +639,17 @@ footer p:nth-child(2) {
     }
 
     .box {
-        width: 100%;
+        max-width: 100%;
         height: auto;
-        padding: 10px;
+        padding: 20px;
+        border-radius: 20px;
         margin: 15px 0;
         position: relative;
         overflow: hidden;
         text-align: center;
         box-shadow: 0 0 20px chartreuse;
         animation: shake 2s infinite;
+        margin-left: 50px;
     }
 
     .contact,
